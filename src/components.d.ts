@@ -6,56 +6,45 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface FmSocialMediaFollowers {
+    }
+    interface FmSocialMediaViews {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLFmSocialMediaFollowersElement extends Components.FmSocialMediaFollowers, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLFmSocialMediaFollowersElement: {
+        prototype: HTMLFmSocialMediaFollowersElement;
+        new (): HTMLFmSocialMediaFollowersElement;
+    };
+    interface HTMLFmSocialMediaViewsElement extends Components.FmSocialMediaViews, HTMLStencilElement {
+    }
+    var HTMLFmSocialMediaViewsElement: {
+        prototype: HTMLFmSocialMediaViewsElement;
+        new (): HTMLFmSocialMediaViewsElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "fm-social-media-followers": HTMLFmSocialMediaFollowersElement;
+        "fm-social-media-views": HTMLFmSocialMediaViewsElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface FmSocialMediaFollowers {
+    }
+    interface FmSocialMediaViews {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "fm-social-media-followers": FmSocialMediaFollowers;
+        "fm-social-media-views": FmSocialMediaViews;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "fm-social-media-followers": LocalJSX.FmSocialMediaFollowers & JSXBase.HTMLAttributes<HTMLFmSocialMediaFollowersElement>;
+            "fm-social-media-views": LocalJSX.FmSocialMediaViews & JSXBase.HTMLAttributes<HTMLFmSocialMediaViewsElement>;
         }
     }
 }

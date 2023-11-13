@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  background-color: var(--bg-color);
+}
+.social-media-follower--item {
+  background-color: var(--bg-color-social-item);
+  color: var(--color-social-item);
+  padding: 10px;
+  text-align: center;
+}
+.social-media-follower--social-network {
+  color: var(--color-social-item-network);
+}
+.social-media-follower--counter {
+  font-size: 56px;
+}
+.social-media-follower--counter>* {
+  display: block;
+}
+.social-media-follower--counter-follower {
+  color: var(--color-social-item-network);
+  font-size: 12px;
+}
+.social-media-follower--counter-by-day {
+  color: var(--bg-color-social-item-counter-by-day);
+}
