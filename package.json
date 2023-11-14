@@ -35,5 +35,8 @@
     "jest-cli": "^27.5.1",
     "puppeteer": "21.1.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "@Clarerodev:registry": "https://npm.pkg.github.com"
+  }
 }
