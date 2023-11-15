@@ -1,6 +1,6 @@
 {
-  "name": "fm-web-components",
-  "version": "0.0.3",
+  "name": "@clarerodev/fm-web-components",
+  "version": "0.0.4",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -12,7 +12,7 @@
   "unpkg": "dist/fm-web-components/fm-web-components.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "https://github.com/clarerodev/fm-web-components.git"
   },
   "files": [
     "dist",
@@ -29,6 +29,7 @@
     "@stencil/core": "^4.0.0"
   },
   "devDependencies": {
+    "@stencil/angular-output-target": "^0.8.3",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
     "jest": "^27.5.1",
@@ -37,6 +38,6 @@
   },
   "license": "MIT",
   "publishConfig": {
-    "@Clarerodev:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/clarerodev"
   }
 }
