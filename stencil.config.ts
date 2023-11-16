@@ -6,9 +6,9 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
-      //esmLoaderPath: '../loader',
+      esmLoaderPath: '../loader',
     },
-    /*{
+    {
       type: 'dist-custom-elements',
     },
     {
@@ -17,7 +17,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
-    },*/
+    },
     angularOutputTarget({
       componentCorePackage: '@clarerodev/fm-web-components',
       outputType: 'component',
