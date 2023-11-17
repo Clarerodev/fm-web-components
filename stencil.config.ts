@@ -6,10 +6,17 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../loader',
+      esmLoaderPath: 'loader',
     },
     {
       type: 'dist-custom-elements',
+      copy: [
+        {
+          src: '**/*.{jpg,png,svg}',
+          dest: 'dist/components/assets',
+          warn: true,
+        },
+      ],
     },
     {
       type: 'docs-readme',

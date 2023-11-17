@@ -3,5 +3,4 @@ export interface SocialMediaInterface {
   userName: string;
   followerCount: string;
   followerByDay: string;
-  followerProgress: string;
 }

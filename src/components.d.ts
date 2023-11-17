@@ -7,7 +7,11 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface FmSocialMediaFollowers {
+        "followerByDay": string;
+        "followerCount": string;
         "socialMediaInfo": string;
+        "type": string;
+        "userName": string;
     }
     interface FmSocialMediaViews {
     }
@@ -32,7 +36,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface FmSocialMediaFollowers {
+        "followerByDay"?: string;
+        "followerCount"?: string;
         "socialMediaInfo"?: string;
+        "type"?: string;
+        "userName"?: string;
     }
     interface FmSocialMediaViews {
     }

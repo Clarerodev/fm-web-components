@@ -8,13 +8,14 @@ import { Components } from '@clarerodev/fm-web-components';
 
 
 @ProxyCmp({
+  inputs: ['followerByDay', 'followerCount', 'socialMediaInfo', 'type', 'userName']
 })
 @Component({
   selector: 'fm-social-media-followers',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['followerByDay', 'followerCount', 'socialMediaInfo', 'type', 'userName'],
 })
 export class FmSocialMediaFollowers {
   protected el: HTMLElement;

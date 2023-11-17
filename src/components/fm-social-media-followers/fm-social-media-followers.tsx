@@ -1,5 +1,4 @@
-import { Component, Host, Prop, getAssetPath, h } from '@stencil/core';
-import { SocialMediaInterface } from '../../interfaces/social-media.interface';
+import { Component, Host, Prop, Watch, getAssetPath, h } from '@stencil/core';
 
 @Component({
   tag: 'fm-social-media-followers',
@@ -10,31 +9,33 @@ import { SocialMediaInterface } from '../../interfaces/social-media.interface';
 export class FmSocialMediaFollowers {
 
   @Prop() socialMediaInfo: string;
+  @Prop() type: string;
+  @Prop() userName: string;
+  @Prop() followerCount: string;
+  @Prop() followerByDay: string;
 
   private _socialMediaImg: string = '';
-  private _socialMediaInfo: SocialMediaInterface;
 
   private getFollowerCounterFragment() {
     return <div class={'social-media-follower--counter'}>
-      <span>{this._socialMediaInfo.followerCount}</span>
+      <span>{this.followerCount}</span>
       <span class={'social-media-follower--counter-follower'}>Followers</span>
     </div>
   }
 
   private getSocialNetworkFragment(){
-    this._socialMediaImg = getAssetPath(`../assets/icon/icon-${this._socialMediaInfo.type}.svg`);
+    this._socialMediaImg = getAssetPath(`../assets/icon-${this.type}.svg`);
 
     return <div class={'social-media-follower--social-network'}>
           <img src={this._socialMediaImg} height="20" width="20"/>
-          <span class={'social-media-follower--username'}>@{this._socialMediaInfo.userName}</span>
+          <span class={'social-media-follower--username'}>@{this.userName}</span>
         </div>
   }
-
   private getFollowerCounterByDayFragment() {
-    const counterByDay = Number(this._socialMediaInfo.followerByDay);
+    const counterByDay = Number(this.followerByDay);
     const counter = counterByDay < 0 ? counterByDay * -1 : counterByDay;
     const counterSymbol = counterByDay < 0 ? 'icon-down' : 'icon-up';
-    const counterByDayImg = getAssetPath(`../assets/icon/${counterSymbol}.svg`);
+    const counterByDayImg = getAssetPath(`../assets/${counterSymbol}.svg`);
 
     let counterRecordStyles = 'social-media-follower--counter-record';
     counterRecordStyles += counterByDay < 0 ? ' negative' : '';
@@ -44,9 +45,8 @@ export class FmSocialMediaFollowers {
       <span class={counterRecordStyles} >{counter} Today</span>
     </div>
   }
-
   private getSocialMediaItem() {
-    return <div class={'social-media-follower--item ' + this._socialMediaInfo.type} >
+    return <div class={'social-media-follower--item ' + this.type} >
           <div class={'social-media-follower--item-social-network'}>
             {this.getSocialNetworkFragment()}
           </div>
@@ -60,15 +60,40 @@ export class FmSocialMediaFollowers {
   }
 
   componentWillRender() {
+    console.log("componentWillRender", this.socialMediaInfo);
+
     if(this.socialMediaInfo) {
-       this._socialMediaInfo = JSON.parse(this.socialMediaInfo);
+       //this._socialMediaInfo = JSON.parse(this.socialMediaInfo);
+    }
+  }
+
+  connectedCallback() {
+     console.log("connectedCallback", this.socialMediaInfo);
+  }
+
+  componentShouldUpdate() {
+     //console.log("componentShouldUpdate", this.socialMediaInfo);
+
+  }
+
+   componentDidLoad() {
+     console.log("componentDidLoad", this.socialMediaInfo);
+
+  }
+
+  @Watch('socialMediaInfo')
+  watchPropHandler(newValue: boolean, oldValue: boolean) {
+    console.log("socialMediaInfo")
+    console.log('The old value of activated is: ', oldValue);
+    console.log('The new value of activated is: ', newValue);
+    if(newValue) {
     }
   }
 
   render() {
     return (
       <Host>
-        { this.socialMediaInfo !== undefined ?
+        { this.type !== undefined ?
           this.getSocialMediaItem() :
           <span>Loading...</span>
         }
