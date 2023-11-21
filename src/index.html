@@ -8,10 +8,13 @@
     <script type="module" src="/build/fm-web-components.esm.js"></script>
     <script nomodule src="/build/fm-web-components.js"></script>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
       fm-social-media-followers {
         --color-social-item: #fff;
         --color-social-item-network: #8C98C6;
         --bg-color-social-item: #252B42;
+        --font-family: 'Inter', sans-serif;
       }
       .fm-social-media-dashboard {
         display: grid;
@@ -22,9 +25,11 @@
   </head>
   <body>
     <div class="container-fm-social-media">
-      <h2>Social Media Dashboard</h2>
       <div class="fm-social-media-dashboard">
         <fm-social-media-followers type ='facebook' user-name='clarerodev' follower-count= '1987' follower-by-day='23'></fm-social-media-followers>
+        <fm-social-media-followers type ='instagram' user-name='clarerodev' follower-count= '1987' follower-by-day='23'></fm-social-media-followers>
+        <fm-social-media-followers type ='twitter' user-name='clarerodev' follower-count= '1987' follower-by-day='23'></fm-social-media-followers>
+        <fm-social-media-followers type ='youtube' user-name='clarerodev' follower-count= '34' follower-by-day='-23'></fm-social-media-followers>
         <!--
            <fm-social-media-followers social-media-info='{"type": "facebook", "userName": "clarerodev", "followerCount": "1987", "followerByDay": "23", "followerProgress": "25"}'></fm-social-media-followers>
         <fm-social-media-followers social-media-info='{"type": "twitter", "userName": "clarerodev", "followerCount": "1044", "followerByDay": "23", "followerProgress": "25"}'></fm-social-media-followers>
