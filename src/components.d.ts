@@ -9,11 +9,13 @@ export namespace Components {
     interface FmSocialMediaFollowers {
         "followerByDay": string;
         "followerCount": string;
-        "socialMediaInfo": string;
         "type": string;
         "userName": string;
     }
     interface FmSocialMediaViews {
+        "likesByDay": string;
+        "likesCount": string;
+        "type": string;
     }
 }
 declare global {
@@ -38,11 +40,13 @@ declare namespace LocalJSX {
     interface FmSocialMediaFollowers {
         "followerByDay"?: string;
         "followerCount"?: string;
-        "socialMediaInfo"?: string;
         "type"?: string;
         "userName"?: string;
     }
     interface FmSocialMediaViews {
+        "likesByDay"?: string;
+        "likesCount"?: string;
+        "type"?: string;
     }
     interface IntrinsicElements {
         "fm-social-media-followers": FmSocialMediaFollowers;

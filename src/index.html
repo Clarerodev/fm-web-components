@@ -16,9 +16,17 @@
         --bg-color-social-item: #252B42;
         --font-family: 'Inter', sans-serif;
       }
+
+      fm-social-media-views {
+        --color-social-item: #fff;
+        --color-social-item-network: #8C98C6;
+        --bg-color-social-item: #252B42;
+        --font-family: 'Inter', sans-serif;
+      }
+
       .fm-social-media-dashboard {
         display: grid;
-        grid: 200px / auto-flow ;
+        grid: auto / auto-flow ;
         gap: 10px;
       }
     </style>
@@ -30,12 +38,13 @@
         <fm-social-media-followers type ='instagram' user-name='clarerodev' follower-count= '1987' follower-by-day='23'></fm-social-media-followers>
         <fm-social-media-followers type ='twitter' user-name='clarerodev' follower-count= '1987' follower-by-day='23'></fm-social-media-followers>
         <fm-social-media-followers type ='youtube' user-name='clarerodev' follower-count= '34' follower-by-day='-23'></fm-social-media-followers>
-        <!--
-           <fm-social-media-followers social-media-info='{"type": "facebook", "userName": "clarerodev", "followerCount": "1987", "followerByDay": "23", "followerProgress": "25"}'></fm-social-media-followers>
-        <fm-social-media-followers social-media-info='{"type": "twitter", "userName": "clarerodev", "followerCount": "1044", "followerByDay": "23", "followerProgress": "25"}'></fm-social-media-followers>
-        <fm-social-media-followers social-media-info='{"type": "instagram", "userName": "clarerodev", "followerCount": "11k", "followerByDay": "23", "followerProgress": "25"}'></fm-social-media-followers>
-        <fm-social-media-followers social-media-info='{"type": "youtube", "userName": "clarerodev", "followerCount": "8239", "followerByDay": "-54", "followerProgress": "25"}'></fm-social-media-followers>
-        -->
+      </div>
+      <br>
+      <div class="fm-social-media-dashboard">
+        <fm-social-media-views type ='facebook' likes-count= '87' likes-by-day='3'></fm-social-media-views>
+        <fm-social-media-views type ='instagram' likes-count= '52' likes-by-day='2'></fm-social-media-views>
+        <fm-social-media-views type ='twitter' likes-count= '5462' likes-by-day='2257'></fm-social-media-views>
+        <fm-social-media-views type ='youtube' likes-count= '52k' likes-by-day='12'></fm-social-media-views>
       </div>
     </div>
   </body>

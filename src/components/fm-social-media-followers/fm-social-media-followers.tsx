@@ -1,4 +1,4 @@
-import { Component, Host, Prop, Watch, getAssetPath, h } from '@stencil/core';
+import { Component, Host, Prop, getAssetPath, h } from '@stencil/core';
 
 @Component({
   tag: 'fm-social-media-followers',
@@ -8,7 +8,6 @@ import { Component, Host, Prop, Watch, getAssetPath, h } from '@stencil/core';
 })
 export class FmSocialMediaFollowers {
 
-  @Prop() socialMediaInfo: string;
   @Prop() type: string;
   @Prop() userName: string;
   @Prop() followerCount: string;
@@ -31,6 +30,7 @@ export class FmSocialMediaFollowers {
           <span class={'social-media-follower--username'}>@{this.userName}</span>
         </div>
   }
+
   private getFollowerCounterByDayFragment() {
     const counterByDay = Number(this.followerByDay);
     const counter = counterByDay < 0 ? counterByDay * -1 : counterByDay;
@@ -45,6 +45,7 @@ export class FmSocialMediaFollowers {
       <span class={counterRecordStyles} >{counter} Today</span>
     </div>
   }
+
   private getSocialMediaItem() {
     return <div class={'social-media-follower--item ' + this.type} >
           <div class={'social-media-follower--item-social-network'}>
@@ -57,37 +58,6 @@ export class FmSocialMediaFollowers {
             {this.getFollowerCounterByDayFragment()}
           </div>
         </div>
-  }
-
-  componentWillRender() {
-    console.log("componentWillRender", this.socialMediaInfo);
-
-    if(this.socialMediaInfo) {
-       //this._socialMediaInfo = JSON.parse(this.socialMediaInfo);
-    }
-  }
-
-  connectedCallback() {
-     console.log("connectedCallback", this.socialMediaInfo);
-  }
-
-  componentShouldUpdate() {
-     //console.log("componentShouldUpdate", this.socialMediaInfo);
-
-  }
-
-   componentDidLoad() {
-     console.log("componentDidLoad", this.socialMediaInfo);
-
-  }
-
-  @Watch('socialMediaInfo')
-  watchPropHandler(newValue: boolean, oldValue: boolean) {
-    console.log("socialMediaInfo")
-    console.log('The old value of activated is: ', oldValue);
-    console.log('The new value of activated is: ', newValue);
-    if(newValue) {
-    }
   }
 
   render() {
