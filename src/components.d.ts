@@ -16,6 +16,7 @@ export namespace Components {
         "likesByDay": string;
         "likesCount": string;
         "type": string;
+        "typeCounter": string;
     }
 }
 declare global {
@@ -47,6 +48,7 @@ declare namespace LocalJSX {
         "likesByDay"?: string;
         "likesCount"?: string;
         "type"?: string;
+        "typeCounter"?: string;
     }
     interface IntrinsicElements {
         "fm-social-media-followers": FmSocialMediaFollowers;

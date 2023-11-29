@@ -10,6 +10,7 @@ export class FmSocialMediaViews {
   @Prop() type: string;
   @Prop() likesCount: string;
   @Prop() likesByDay: string;
+  @Prop() typeCounter: string;
 
   private _socialMediaImg: string = '';
 
@@ -37,13 +38,13 @@ export class FmSocialMediaViews {
   }
 
   private getSocialMediaItem() {
-    return <div class={'social-media-views--item left ' + this.type}>
+    return <div class={'social-media-views--item ' + this.type}>
       <div class={'social-media-views--item-content'}>
-        <h3 class={'social-media-views--item-content--page-view social-media-view--item-content--limit'}>Page views</h3>
-        <p>{this.likesCount}</p>
+        <h3 class={'social-media-views--item-content--page-view social-media-view--item-content--limit'}>{this.typeCounter}</h3>
+        {this.getSocialNetworkFragment()}
       </div>
-      <div class={'social-media-views--item-content right '}>
-          {this.getSocialNetworkFragment()}
+      <div class={'social-media-views--item-content'}>
+        <p>{this.likesCount}</p>
         {this.getLikesPercentaje()}
       </div>
     </div>

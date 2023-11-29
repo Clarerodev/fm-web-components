@@ -7,16 +7,15 @@
 .social-media-views--item {
   background-color: var(--bg-color-social-item);
   color: var(--color-social-item);
-  padding: 27px;
-  padding-right: 31px;
+  padding-top: 1.688rem;
+  padding-bottom: 1.188rem;
+  padding-right: 1.938rem;
+  padding-left: 1.5rem;
   border-radius: 5px;
 }
 .social-media-views--item-content {
-  width: 50%;
-  display: inline-block;
-  &.right {
-    text-align: right;
-  }
+  display: flex;
+  justify-content: space-between;
 }
 .social-media-views--item-content p {
   margin: 0;
@@ -24,17 +23,19 @@
 }
 .social-media-views--item-content .social-media-views--item-content--page-view {
     margin-top: 0;
+    color: var(--color-social-item-network);
+    font-size: 0.875rem;
 }
 .social-media-views--item-content--limit {
-    margin-bottom: 23px;
+    margin-bottom: 1.438rem;
 }
 .social-media-views--social-network.social-media-views--item-content--limit {
-  margin-bottom: 32px;
+  margin-bottom: 1.563rem;
 }
 .social-media-likes--counter-by-day {
   display: inline-flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 .social-media-likes--counter-record {
     color: #1EB589;

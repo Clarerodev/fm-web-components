@@ -8,14 +8,14 @@ import { Components } from '@clarerodev/fm-web-components';
 
 
 @ProxyCmp({
-  inputs: ['followerByDay', 'followerCount', 'socialMediaInfo', 'type', 'userName']
+  inputs: ['followerByDay', 'followerCount', 'type', 'userName']
 })
 @Component({
   selector: 'fm-social-media-followers',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['followerByDay', 'followerCount', 'socialMediaInfo', 'type', 'userName'],
+  inputs: ['followerByDay', 'followerCount', 'type', 'userName'],
 })
 export class FmSocialMediaFollowers {
   protected el: HTMLElement;
@@ -30,13 +30,14 @@ export declare interface FmSocialMediaFollowers extends Components.FmSocialMedia
 
 
 @ProxyCmp({
+  inputs: ['likesByDay', 'likesCount', 'type', 'typeCounter']
 })
 @Component({
   selector: 'fm-social-media-views',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: [],
+  inputs: ['likesByDay', 'likesCount', 'type', 'typeCounter'],
 })
 export class FmSocialMediaViews {
   protected el: HTMLElement;

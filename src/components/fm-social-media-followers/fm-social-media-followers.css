@@ -6,7 +6,7 @@
 .social-media-follower--item {
   background-color: var(--bg-color-social-item);
   color: var(--color-social-item);
-  padding: 28px 10px 24px;
+  padding: 1.75rem 0.625rem 1.5rem;
   text-align: center;
   border-top: 4px solid;
   border-top-left-radius: 5px;
@@ -35,36 +35,44 @@
 }
 .social-media-follower--social-network {
   color: var(--color-social-item-network);
-  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
   display: inline-flex;
   align-content: center;
 }
 .social-media-follower--username {
-  font-size: 12px;
+  font-size: 0.75rem;
   align-self: center;
-  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 .social-media-follower--counter {
-  font-size: 56px;
+  font-size: 3.5rem;
   font-weight: 700;
   font-style: normal;
   letter-spacing: -2px;
-  line-height: 45px;
 }
 .social-media-follower--counter>* {
   display: block;
 }
+
+.social-media-follower--counter-number {
+  line-height: 3rem;
+  margin-bottom: 0.563rem;
+}
+
 .social-media-follower--counter-follower {
   color: var(--color-social-item-network);
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 5px;
+  margin-bottom: 1.563rem;
 }
-.social-media-follower--counter-by-day {
+.social-media-follower--item-follower-by-day {
   color: #1EB589;
   display: inline-flex;
   align-items: center;
+  line-height: 0.938rem;
 }
+
 .social-media-follower--counter-record.negative {
   color: #DC414C;
 }

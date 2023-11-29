@@ -26,8 +26,8 @@
 
       .fm-social-media-dashboard {
         display: grid;
-        grid: auto / auto-flow ;
         gap: 10px;
+        grid: auto-flow / 1fr 1fr;
       }
     </style>
   </head>
@@ -41,10 +41,10 @@
       </div>
       <br>
       <div class="fm-social-media-dashboard">
-        <fm-social-media-views type ='facebook' likes-count= '87' likes-by-day='3'></fm-social-media-views>
-        <fm-social-media-views type ='instagram' likes-count= '52' likes-by-day='2'></fm-social-media-views>
-        <fm-social-media-views type ='twitter' likes-count= '5462' likes-by-day='2257'></fm-social-media-views>
-        <fm-social-media-views type ='youtube' likes-count= '52k' likes-by-day='12'></fm-social-media-views>
+        <fm-social-media-views type-counter='Page Views' type ='facebook' likes-count= '87' likes-by-day='3'></fm-social-media-views>
+        <fm-social-media-views type-counter='Likes' type ='instagram' likes-count= '52' likes-by-day='2'></fm-social-media-views>
+        <fm-social-media-views type-counter='Profile Views' type ='twitter' likes-count= '5462' likes-by-day='2257'></fm-social-media-views>
+        <fm-social-media-views type-counter='Total Views' type ='youtube' likes-count= '52k' likes-by-day='12'></fm-social-media-views>
       </div>
     </div>
   </body>

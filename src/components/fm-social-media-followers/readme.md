@@ -7,13 +7,12 @@
 
 ## Properties
 
-| Property          | Attribute           | Description | Type     | Default     |
-| ----------------- | ------------------- | ----------- | -------- | ----------- |
-| `followerByDay`   | `follower-by-day`   |             | `string` | `undefined` |
-| `followerCount`   | `follower-count`    |             | `string` | `undefined` |
-| `socialMediaInfo` | `social-media-info` |             | `string` | `undefined` |
-| `type`            | `type`              |             | `string` | `undefined` |
-| `userName`        | `user-name`         |             | `string` | `undefined` |
+| Property        | Attribute         | Description | Type     | Default     |
+| --------------- | ----------------- | ----------- | -------- | ----------- |
+| `followerByDay` | `follower-by-day` |             | `string` | `undefined` |
+| `followerCount` | `follower-count`  |             | `string` | `undefined` |
+| `type`          | `type`            |             | `string` | `undefined` |
+| `userName`      | `user-name`       |             | `string` | `undefined` |
 
 
 ----------------------------------------------

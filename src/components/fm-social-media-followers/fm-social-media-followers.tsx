@@ -17,7 +17,7 @@ export class FmSocialMediaFollowers {
 
   private getFollowerCounterFragment() {
     return <div class={'social-media-follower--counter'}>
-      <span>{this.followerCount}</span>
+      <span class={'social-media-follower--counter-number'}>{this.followerCount}</span>
       <span class={'social-media-follower--counter-follower'}>Followers</span>
     </div>
   }
@@ -40,7 +40,7 @@ export class FmSocialMediaFollowers {
     let counterRecordStyles = 'social-media-follower--counter-record';
     counterRecordStyles += counterByDay < 0 ? ' negative' : '';
 
-    return <div class={'social-media-follower--counter-by-day'}>
+    return <div class={'social-media-follower--item-follower-by-day'}>
       <img src={counterByDayImg} width="8" height="4"/>
       <span class={counterRecordStyles} >{counter} Today</span>
     </div>
@@ -54,9 +54,7 @@ export class FmSocialMediaFollowers {
           <div class={'social-media-follower--item-follower-counter'}>
             {this.getFollowerCounterFragment()}
           </div>
-          <div class={'social-media-follower--item-follower-by-day'}>
-            {this.getFollowerCounterByDayFragment()}
-          </div>
+          {this.getFollowerCounterByDayFragment()}
         </div>
   }
 
