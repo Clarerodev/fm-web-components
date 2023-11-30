@@ -24,7 +24,7 @@ export class FmSocialMediaViews {
     counterRecordStyles += counterByDay < 0 ? ' negative' : '';
 
     return <div class={'social-media-likes--counter-by-day'}>
-      <img src={counterByDayImg} width="8" height="4"/>
+      <img src={counterByDayImg} width="8" height="4" alt={'signal icon '+ counterSymbol}/>
       <span class={counterRecordStyles} >{counter} %</span>
     </div>
   }
@@ -33,7 +33,7 @@ export class FmSocialMediaViews {
      this._socialMediaImg = getAssetPath(`../assets/icon-${this.type}.svg`);
 
     return <div class={'social-media-views--social-network social-media-views--item-content--limit'}>
-          <img src={this._socialMediaImg} height="20" width="20"/>
+          <img src={this._socialMediaImg} height="20" width="20" alt={'social network icon ' + this.type}/>
         </div>
   }
 
@@ -54,7 +54,9 @@ export class FmSocialMediaViews {
     return (
       <Host>
         { this.type !== undefined ?
-          this.getSocialMediaItem() :
+          <article>
+            {this.getSocialMediaItem()}
+          </article> :
           <span>Loading...</span>
         }
       </Host>

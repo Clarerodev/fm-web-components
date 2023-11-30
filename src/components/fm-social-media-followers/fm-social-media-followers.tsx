@@ -26,7 +26,7 @@ export class FmSocialMediaFollowers {
     this._socialMediaImg = getAssetPath(`../assets/icon-${this.type}.svg`);
 
     return <div class={'social-media-follower--social-network'}>
-          <img src={this._socialMediaImg} height="20" width="20"/>
+          <img src={this._socialMediaImg} height="20" width="20" alt={'Social network icon ' + this.type}/>
           <span class={'social-media-follower--username'}>@{this.userName}</span>
         </div>
   }
@@ -41,7 +41,7 @@ export class FmSocialMediaFollowers {
     counterRecordStyles += counterByDay < 0 ? ' negative' : '';
 
     return <div class={'social-media-follower--item-follower-by-day'}>
-      <img src={counterByDayImg} width="8" height="4"/>
+      <img src={counterByDayImg} width="8" height="4" alt={'symbol icon ' + counterSymbol}/>
       <span class={counterRecordStyles} >{counter} Today</span>
     </div>
   }
@@ -62,7 +62,9 @@ export class FmSocialMediaFollowers {
     return (
       <Host>
         { this.type !== undefined ?
-          this.getSocialMediaItem() :
+          <article>
+            {this.getSocialMediaItem()}
+          </article>:
           <span>Loading...</span>
         }
       </Host>
