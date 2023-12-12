@@ -12,6 +12,10 @@
   padding-right: 1.938rem;
   padding-left: 1.5rem;
   border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--bg-color-social-item--hover);
+  }
 }
 .social-media-views--item-content {
   display: flex;
